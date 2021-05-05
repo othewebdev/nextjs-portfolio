@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && mv out _static",
-    "postbuild": "next-sitemap"
+    "build": "next build && next export ",
+    "postbuild": "next-sitemap --config customsitemap.js"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
