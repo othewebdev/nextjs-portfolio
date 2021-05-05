@@ -8,6 +8,7 @@
     "postbuild": "next-sitemap --config customsitemap.js"
   },
   "dependencies": {
+    "@next/env": "^10.2.0",
     "dotenv": "^8.2.0",
     "dotenv-load": "^2.0.0",
     "emailjs-com": "^2.6.4",
