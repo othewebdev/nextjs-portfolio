@@ -12,6 +12,7 @@ export default function Logo({ src, ...rest }) {
         cursor: "pointer",
         mr: 15,
         width: 250,
+        height: 50,
       }}
       {...rest}
     >
