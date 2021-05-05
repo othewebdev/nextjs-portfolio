@@ -47,10 +47,7 @@ export default function KeyFeature() {
   return (
     <section sx={{ variant: "section.keyFeature" }} id="feature">
       <Container>
-        <SectionHeader
-          slogan="What do I use?"
-          title="My Dev Toolbox Contains"
-        />
+        <SectionHeader slogan="What do I use?" title="My Skills" />
         <Grid sx={styles.grid}>
           {data.map((item) => (
             <FeatureCardColumn
