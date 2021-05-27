@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Container, Label, Input, Textarea, Box, Button } from "theme-ui";
+import { useContext, useEffect } from "react";
+import ArrowEven from "assets/arrowEven.svg";
+import ArrowOdd from "assets/arrowOdd.svg";
+import PatternBG from "assets/patternBG.png";
 import SectionHeader from "components/section-header";
 import emailjs from "emailjs-com";
-import PatternBG from "assets/patternBG.png";
-import ArrowOdd from "assets/arrowOdd.svg";
-import ArrowEven from "assets/arrowEven.svg";
+import { Box, Button, Container, jsx, Label } from "theme-ui";
+import { MessageContext } from "utils/Context";
 
 const data = [
   {
@@ -55,8 +56,19 @@ export default function Contact() {
       );
     e.target.reset();
   }
+
+  const [isEmailSent, setIsEmailSent] = useContext(MessageContext);
+
+  const sendMessage = () => {
+    setIsEmailSent(true);
+    setTimeout(() => {
+      setIsEmailSent(false);
+    }, 3000);
+  };
+
   return (
     <section id="contact" sx={styles.workflow}>
+      <Container sx={styles.messageContainer} />
       <Container>
         <SectionHeader
           isWhite={true}
@@ -73,7 +85,11 @@ export default function Contact() {
             <input name="subject" sx={styles.formInput} />
             <Label sx={styles.formLabel}>Message </Label>
             <textarea name="message" sx={styles.formTextarea} />
-            <Button type="submit" sx={styles.submitButton}>
+            <Button
+              onClick={() => sendMessage()}
+              type="submit"
+              sx={styles.submitButton}
+            >
               Send Message
             </Button>
           </Container>
@@ -161,6 +177,10 @@ const styles = {
     color: "white",
     my: "20px",
     borderRadius: "5px",
+    "&:hover": {
+      backgroundColor: "white",
+      color: "primary",
+    },
   },
   formTextarea: {
     width: "300px",
@@ -172,6 +192,15 @@ const styles = {
   formContainer: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  messageContainer: {
+    display: "flex",
+    zIndex: 99,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "black",
     justifyContent: "center",
     alignItems: "center",
   },

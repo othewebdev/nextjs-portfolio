@@ -1,13 +1,17 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button } from "theme-ui";
+import { useContext, useEffect } from "react";
+import { jsx, Container, Flex } from "theme-ui";
 import { keyframes } from "@emotion/core";
 import { Link } from "react-scroll";
 import Logo from "components/logo";
 import LogoDark from "assets/logo.png";
 import MobileDrawer from "./mobile-drawer";
 import menuItems from "./header.data";
+import { MessageContext } from "utils/Context";
 
 export default function Header({ className }) {
+  const [isEmailSent, setIsEmailSent] = useContext(MessageContext);
+
   return (
     <header sx={styles.header} className={className} id="header">
       <Container sx={styles.container}>
@@ -29,6 +33,11 @@ export default function Header({ className }) {
         </Flex>
         <MobileDrawer></MobileDrawer>
       </Container>
+      {isEmailSent && (
+        <Container sx={styles.messageContainer}>
+          <h3>Message Sent!</h3>
+        </Container>
+      )}
     </header>
   );
 }
@@ -78,6 +87,13 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+  },
+  messageContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    width: "100vw",
   },
   nav: {
     mx: "auto",

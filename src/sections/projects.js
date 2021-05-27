@@ -59,7 +59,7 @@ const data = [
 
 export default function Projects() {
   return (
-    <section id="projects" sx={{ variant: "section.feature" }}>
+    <section id="projects" sx={{ variant: "section.keyFeature" }}>
       <Container>
         <SectionHeader slogan="What have I worked on?" title="My Portfolio" />
       </Container>
