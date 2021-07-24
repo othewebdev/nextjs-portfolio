@@ -7,6 +7,7 @@ import LiveLook from "assets/projects/livelook.png";
 import Rooted from "assets/projects/rooted.png";
 import EVP from "assets/projects/EVP.png";
 import ScuttleButt from "assets/projects/scuttlebutt.png";
+import AbacusCPA from "assets/projects/abacus.png";
 import TruleyUnique from "assets/projects/truleyunique.png";
 
 const data = [
@@ -48,6 +49,14 @@ const data = [
   },
   {
     id: 5,
+    imgSrc: AbacusCPA,
+    path: "https://www.abacuscpas.com/",
+    altText: "Abacus CPA's",
+    title: "Abacus CPA's",
+    text: "Tax filing application with in-depth status tracking.",
+  },
+  {
+    id: 7,
     imgSrc: TruleyUnique,
     path: "https://truleyunique.com/",
     altText: "Truley Unique",
