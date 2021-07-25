@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import { useContext, useEffect } from "react";
 import ArrowEven from "assets/arrowEven.svg";
 import ArrowOdd from "assets/arrowOdd.svg";
 import PatternBG from "assets/patternBG.png";
 import SectionHeader from "components/section-header";
 import emailjs from "emailjs-com";
-import { Box, Button, Container, jsx, Label } from "theme-ui";
+import { useContext } from "react";
+import { Container, jsx, Button } from "theme-ui";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { MessageContext } from "utils/Context";
 
 const data = [
@@ -58,7 +59,13 @@ export default function Contact() {
   }
 
   const [isEmailSent, setIsEmailSent] = useContext(MessageContext);
-
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
   const sendMessage = () => {
     setIsEmailSent(true);
     setTimeout(() => {
@@ -75,25 +82,77 @@ export default function Contact() {
           slogan="Want to connect?"
           title="Contact Me"
         />
-        <Box as="form" onSubmit={sendEmail}>
-          <Container sx={styles.formContainer}>
-            <Label sx={styles.formLabel}>Name</Label>
-            <input name="name" sx={styles.formInput} />
-            <Label sx={styles.formLabel}>Email </Label>
-            <input name="email" sx={styles.formInput} />
-            <Label sx={styles.formLabel}>Subject </Label>
-            <input name="subject" sx={styles.formInput} />
-            <Label sx={styles.formLabel}>Message </Label>
-            <textarea name="message" sx={styles.formTextarea} />
+        <Formik
+          initialValues={{
+            name: "",
+            email: "",
+            message: "",
+          }}
+          onSubmit={(values, actions) => {
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encode({ "form-name": "contact-demo", ...values }),
+            })
+              .then(() => {
+                alert("Success");
+                actions.resetForm();
+              })
+              .catch(() => {
+                alert("Error");
+              })
+              .finally(() => actions.setSubmitting(false));
+          }}
+          validate={(values) => {
+            const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+            const errors = {};
+            if (!values.name) {
+              errors.name = "* Name Required";
+            }
+            if (!values.email || !emailRegex.test(values.email)) {
+              errors.email = "* Valid Email Required";
+            }
+            if (!values.message) {
+              errors.message = "* Message Required";
+            }
+            return errors;
+          }}
+        >
+          <Form name="contact" sx={styles.formContainer} data-netlify={true}>
+            <label htmlFor="name" sx={styles.formLabel}>
+              Name:{" "}
+            </label>
+            <Field name="name" sx={styles.formInput} />
+            <div sx={styles.errorLabel}>
+              <ErrorMessage name="name" sx={styles.errorLabel} />
+            </div>
+            <label htmlFor="email" sx={styles.formLabel}>
+              Email:{" "}
+            </label>
+            <Field name="email" sx={styles.formInput} />
+            <div sx={styles.errorLabel}>
+              <ErrorMessage name="email" />
+            </div>
+            <label htmlFor="message" sx={styles.formLabel}>
+              Message:{" "}
+            </label>
+            <Field
+              name="message"
+              component="textarea"
+              sx={styles.formTextarea}
+            />
+            <div sx={styles.errorLabel}>
+              <ErrorMessage name="message" sx={styles.errorLabel} />
+            </div>
             <Button
-              onClick={() => sendMessage()}
               type="submit"
+              onClick={() => sendMessage()}
               sx={styles.submitButton}
             >
-              Send Message
+              Send
             </Button>
-          </Container>
-        </Box>
+          </Form>
+        </Formik>
       </Container>
     </section>
   );
@@ -163,7 +222,7 @@ const styles = {
     },
   },
   formInput: {
-    width: "300px",
+    width: "265px",
     height: "50px",
     my: "12px",
     border: "1px solid white",
@@ -171,7 +230,7 @@ const styles = {
     color: "#ffffff",
   },
   submitButton: {
-    width: "300px",
+    width: "265px",
     height: "50px",
     border: "1px solid white",
     color: "white",
@@ -183,8 +242,9 @@ const styles = {
     },
   },
   formTextarea: {
-    width: "300px",
+    width: "265px",
     height: "150px",
+    color: "#ffffff",
     border: "1px solid white",
     backgroundColor: "transparent",
     resize: "none",
@@ -208,6 +268,10 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignSelf: "center",
+  },
+  errorLabel: {
+    fontWeight: "700",
+    color: "#ff0000",
   },
   iconBox: {
     width: ["50px", null, "60px", null, null, "70px"],
