@@ -11,6 +11,10 @@ import JavaScript from "assets/key-feature/js.png";
 import AWS from "assets/key-feature/aws.png";
 import NextJS from "assets/key-feature/nextjs.png";
 import Vercel from "assets/key-feature/vercel.png";
+import Netlify from "assets/key-feature/netlify.png";
+import NodeJS from "assets/key-feature/nodejs.png";
+import Yarn from "assets/key-feature/yarn.png";
+import Photoshop from "assets/key-feature/photoshop.png";
 
 const data = [
   {
@@ -73,6 +77,36 @@ const data = [
     title: "Vercel",
     text:
       "Vercel allows fast and easy deployments for all frontend applications. It's easy to use and scalability is dynamic.",
+  },
+  {
+    id: 9,
+    imgSrc: Netlify,
+    altText: "Netlify",
+    title: "Netlify",
+    text:
+      "An intuitive Git-based workflow and powerful serverless platform to build, deploy, and collaborate on web apps",
+  },
+  {
+    id: 10,
+    imgSrc: NodeJS,
+    altText: "NodeJS",
+    title: "NodeJS",
+    text:
+      "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+  },
+  {
+    id: 11,
+    imgSrc: Yarn,
+    altText: "Yarn",
+    title: "Yarn",
+    text: "Yarn is a package manager that doubles down as project manager.",
+  },
+  {
+    id: 12,
+    imgSrc: Photoshop,
+    altText: "Adobe Photoshop",
+    title: "Adobe Photoshop",
+    text: "The most popular photo-editing and digital graphic software.",
   },
 ];
 
