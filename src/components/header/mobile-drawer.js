@@ -30,6 +30,7 @@ export default function MobileDrawer() {
               <Link
                 activeClass="active"
                 to={menuItem.path}
+                onClick={() => setIsDrawerOpen((prevState) => !prevState)}
                 smooth={true}
                 offset={-50}
                 duration={500}
