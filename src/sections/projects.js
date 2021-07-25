@@ -8,6 +8,7 @@ import Rooted from "assets/projects/rooted.png";
 import EVP from "assets/projects/EVP.png";
 import ScuttleButt from "assets/projects/scuttlebutt.png";
 import AbacusCPA from "assets/projects/abacus.png";
+import MercyHealth from "assets/projects/mercy.png";
 import TruleyUnique from "assets/projects/truleyunique.png";
 
 const data = [
@@ -51,18 +52,18 @@ const data = [
     id: 5,
     imgSrc: AbacusCPA,
     path: "https://www.abacuscpas.com/",
-    altText: "Abacus CPA's",
-    title: "Abacus CPA's",
+    altText: "Abacus CPA",
+    title: "Abacus CPA",
     text: "Tax filing application with in-depth status tracking.",
   },
   {
-    id: 7,
-    imgSrc: TruleyUnique,
-    path: "https://truleyunique.com/",
-    altText: "Truley Unique",
-    title: "Truley Unique",
+    id: 6,
+    imgSrc: MercyHealth,
+    path: "https://www.mercy.com/",
+    altText: "Mercy Health",
+    title: "Mercy Health",
     text:
-      "Ecommerce site for face masks, shirts, earrings and other specialty items.",
+      "Dashboard and mobile application built for helping hospital workers submit information back and forth.",
   },
 ];
 

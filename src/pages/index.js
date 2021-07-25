@@ -12,7 +12,7 @@ export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-        <SEO title="Odis Barnett" />
+        <SEO title="Odis Barnett | Portfolio" />
         <Banner />
         <DevToolbox />
         <Projects />
