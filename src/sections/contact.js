@@ -96,11 +96,9 @@ export default function Contact() {
             })
               .then(() => {
                 console.log("Success");
-                sendMessage();
                 actions.resetForm();
               })
               .catch(() => {
-                sendMessage();
                 console.log("Error");
               })
               .finally(() => actions.setSubmitting(false));
@@ -146,7 +144,11 @@ export default function Contact() {
             <div sx={styles.errorLabel}>
               <ErrorMessage name="message" sx={styles.errorLabel} />
             </div>
-            <Button type="submit" sx={styles.submitButton}>
+            <Button
+              type="submit"
+              onClick={() => sendMessage()}
+              sx={styles.submitButton}
+            >
               Send
             </Button>
           </Form>
