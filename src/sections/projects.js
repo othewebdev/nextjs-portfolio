@@ -52,8 +52,8 @@ const data = [
     id: 5,
     imgSrc: AbacusCPA,
     path: "https://www.abacuscpas.com/",
-    altText: "Abacus CPA",
-    title: "Abacus CPA",
+    altText: "Abacus CPAs",
+    title: "Abacus CPAs",
     text: "Tax filing application with in-depth status tracking.",
   },
   {
