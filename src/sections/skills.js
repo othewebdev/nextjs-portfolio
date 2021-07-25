@@ -14,7 +14,7 @@ import Vercel from "assets/key-feature/vercel.png";
 import Netlify from "assets/key-feature/netlify.png";
 import NodeJS from "assets/key-feature/nodejs.png";
 import Yarn from "assets/key-feature/yarn.png";
-import Photoshop from "assets/key-feature/photoshop.png";
+import Wordpress from "assets/key-feature/wordpress.png";
 
 const data = [
   {
@@ -103,10 +103,10 @@ const data = [
   },
   {
     id: 12,
-    imgSrc: Photoshop,
-    altText: "Adobe Photoshop",
-    title: "Adobe Photoshop",
-    text: "The most popular photo-editing and digital graphic software.",
+    imgSrc: Wordpress,
+    altText: "WordPress",
+    title: "WordPress",
+    text: "A very popular website building platform",
   },
 ];
 
