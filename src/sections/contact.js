@@ -95,11 +95,13 @@ export default function Contact() {
               body: encode({ "form-name": "contact-demo", ...values }),
             })
               .then(() => {
-                alert("Success");
+                console.log("Success");
+                sendMessage();
                 actions.resetForm();
               })
               .catch(() => {
-                alert("Error");
+                sendMessage();
+                console.log("Error");
               })
               .finally(() => actions.setSubmitting(false));
           }}
@@ -144,11 +146,7 @@ export default function Contact() {
             <div sx={styles.errorLabel}>
               <ErrorMessage name="message" sx={styles.errorLabel} />
             </div>
-            <Button
-              type="submit"
-              onClick={() => sendMessage()}
-              sx={styles.submitButton}
-            >
+            <Button type="submit" sx={styles.submitButton}>
               Send
             </Button>
           </Form>
