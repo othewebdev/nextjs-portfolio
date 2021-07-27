@@ -246,7 +246,7 @@ export default {
     }, // default variant for MenuButton
     // you can reference other values defined in the theme
     defaultBtn: {
-      borderRadius: "45px",
+      borderRadius: "5px",
       fontSize: ["14px", null, null, 2],
       letterSpacings: "-0.15px",
       padding: ["12px 20px", null, "15px 30px"],
@@ -290,7 +290,7 @@ export default {
     secondaryResume: {
       variant: "buttons.defaultBtn",
       border: "2px solid",
-      borderRadius: "0px",
+      borderRadius: "5px",
       borderColor: "white",
       color: "white",
       bg: "transparent",
@@ -306,7 +306,7 @@ export default {
     triaryResume: {
       variant: "buttons.defaultBtn",
       border: "2px solid",
-      borderRadius: "0px",
+      borderRadius: "5px",
       borderColor: "white",
       width: "100%",
       color: "white",

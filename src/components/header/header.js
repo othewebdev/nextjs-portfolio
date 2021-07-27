@@ -10,7 +10,7 @@ import menuItems from "./header.data";
 import MobileDrawer from "./mobile-drawer";
 
 export default function Header({ className }) {
-  const [isEmailSent, setIsEmailSent] = useContext(MessageContext);
+  const [isEmailSent] = useContext(MessageContext);
 
   return (
     <header sx={styles.header} className={className} id="header">

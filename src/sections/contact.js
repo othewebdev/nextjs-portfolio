@@ -9,55 +9,7 @@ import { Container, jsx, Button } from "theme-ui";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { MessageContext } from "utils/Context";
 
-const data = [
-  {
-    id: 1,
-    title: "Set disbursement Instructions",
-    text:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
-  },
-  {
-    id: 2,
-    title: "Assembly retrieves funds from your account",
-    text:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
-  },
-  {
-    id: 3,
-    title: "Assembly initiates disbursement",
-    text:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
-  },
-  {
-    id: 4,
-    title: "Customer receives funds payment",
-    text:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
-  },
-];
-
 export default function Contact() {
-  function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_ax81pyn",
-        "template_0shp0wo",
-        e.target,
-        "user_FD9iHhnkhZkM9OQUNF7io"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-  }
-
   const [isEmailSent, setIsEmailSent] = useContext(MessageContext);
   const encode = (data) => {
     return Object.keys(data)
@@ -225,6 +177,7 @@ const styles = {
     width: "265px",
     height: "50px",
     my: "12px",
+    borderRadius: "5px",
     border: "1px solid white",
     backgroundColor: "transparent",
     color: "#ffffff",
@@ -246,6 +199,7 @@ const styles = {
     height: "150px",
     color: "#ffffff",
     border: "1px solid white",
+    borderRadius: "5px",
     backgroundColor: "transparent",
     resize: "none",
   },
