@@ -87,6 +87,7 @@ export default {
     keyFeature: {
       pt: [8, null, 9, null, null, 10],
       pb: ["90px", null, 9, null, null, 10, null, "200px"],
+      padding: "30px",
     },
     feature: {
       pb: [8, null, 9, null, null, 10, null, "170px"],
@@ -284,6 +285,37 @@ export default {
       "&:hover": {
         color: "white",
         bg: "primary",
+      },
+    },
+    secondaryResume: {
+      variant: "buttons.defaultBtn",
+      border: "2px solid",
+      borderRadius: "0px",
+      borderColor: "white",
+      color: "white",
+      bg: "transparent",
+      padding: ["5px 8px", null, "8px 15px"],
+      "@media screen and (max-width: 1024px)": {
+        display: "none",
+      },
+      "&:hover": {
+        color: "primary",
+        bg: "white",
+      },
+    },
+    triaryResume: {
+      variant: "buttons.defaultBtn",
+      border: "2px solid",
+      borderRadius: "0px",
+      borderColor: "white",
+      width: "100%",
+      color: "white",
+      bg: "transparent",
+      padding: ["10px 15px", null, "15px 30px"],
+      margin: "35px 0",
+      "&:hover": {
+        color: "primary",
+        bg: "white",
       },
     },
     textButton: {

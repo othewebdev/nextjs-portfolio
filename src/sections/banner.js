@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import BannerImg from "assets/banner-thumb.png";
 import ShapeLeft from "assets/shape-left.png";
 import ShapeRight from "assets/shape-right.png";
+import Typewriter from "typewriter-effect";
 
 export default function Banner() {
   return (
@@ -12,14 +13,27 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading variant="heroPrimary" as="h1">
-            I Develop Websites
+            I Develop{" "}
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Websites")
+                  .pauseFor(5000)
+                  .deleteAll()
+                  .typeString("Mobile Apps")
+                  .pauseFor(5000)
+                  .deleteAll()
+                  .typeString("Software")
+                  .pauseFor(5000)
+                  .deleteAll()
+                  .start();
+              }}
+            />
           </Heading>
-          <Text as="p" variant="heroSecondary">
-            + Mobile Applications
-          </Text>
-          <Text as="p" variant="heroSecondary">
-            + Software Solutions
-          </Text>
           <Link to="projects">
             <Button variant="secondary">View Portfolio</Button>
           </Link>
@@ -37,7 +51,7 @@ export default function Banner() {
 
 const styles = {
   banner: {
-    pt: ["140px", "145px", "155px", "170px", null, null, "180px", "215px"],
+    pt: ["140px", "145px", "155px", "170px", null, null, "180px", "150px"],
     pb: [2, null, 0, null, 2, 0, null, 5],
     position: "relative",
     zIndex: 2,

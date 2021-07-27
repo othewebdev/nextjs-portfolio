@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { Link } from "react-scroll";
-import { Box } from "theme-ui";
+import { Box, Button, Link as NavLink } from "theme-ui";
 import menuItems from "./header.data";
 
 export default function MobileDrawer() {
@@ -41,6 +41,12 @@ export default function MobileDrawer() {
               </Link>
             ))}
           </Box>
+          <NavLink
+            target="_blank"
+            href="https://drive.google.com/file/d/1cbNHvIRUIHCNfNjXyumgDOJK4fDygESI/view"
+          >
+            <Button variant="triaryResume">View Resume</Button>
+          </NavLink>
           <Box sx={styles.menuFooter}>
             <Box sx={styles.social}>
               <Socials />

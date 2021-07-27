@@ -5,7 +5,7 @@ export default function SEO({
   description = "Odis Barnett Portfolio Website",
   author = "Odis Barnett",
   meta,
-  title = "Odis Barnett",
+  title = "Odis Barnett | Portfolio",
 }) {
   const metaData = [
     {

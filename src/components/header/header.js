@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { useContext, useEffect } from "react";
-import { jsx, Container, Flex } from "theme-ui";
 import { keyframes } from "@emotion/core";
-import { Link } from "react-scroll";
-import Logo from "components/logo";
 import LogoDark from "assets/logo.png";
-import MobileDrawer from "./mobile-drawer";
-import menuItems from "./header.data";
+import Logo from "components/logo";
+import { useContext } from "react";
+import { Link } from "react-scroll";
+import { Button, Container, Flex, jsx, Link as NavLink } from "theme-ui";
 import { MessageContext } from "utils/Context";
+import menuItems from "./header.data";
+import MobileDrawer from "./mobile-drawer";
 
 export default function Header({ className }) {
   const [isEmailSent, setIsEmailSent] = useContext(MessageContext);
@@ -31,6 +31,12 @@ export default function Header({ className }) {
             </Link>
           ))}
         </Flex>
+        <NavLink
+          target="_blank"
+          href="https://drive.google.com/file/d/1cbNHvIRUIHCNfNjXyumgDOJK4fDygESI/view"
+        >
+          <Button variant="secondaryResume">View Resume</Button>
+        </NavLink>
         <MobileDrawer></MobileDrawer>
       </Container>
       {isEmailSent && (
