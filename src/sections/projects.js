@@ -1,15 +1,13 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Container, Grid } from "theme-ui";
-import SectionHeader from "components/section-header";
-import FeatureCard from "components/feature-card.js";
-import LiveLook from "assets/projects/livelook.png";
-import Rooted from "assets/projects/rooted.png";
-import EVP from "assets/projects/EVP.png";
-import ScuttleButt from "assets/projects/scuttlebutt.png";
 import AbacusCPA from "assets/projects/abacus.png";
+import EVP from "assets/projects/EVP.png";
+import LiveLook from "assets/projects/livelook.png";
 import MercyHealth from "assets/projects/mercy.png";
-import TruleyUnique from "assets/projects/truleyunique.png";
+import Rooted from "assets/projects/rooted.png";
+import ScuttleButt from "assets/projects/scuttlebutt.png";
+import FeatureCard from "components/feature-card.js";
+import SectionHeader from "components/section-header";
+import { Container, Grid, jsx } from "theme-ui";
 
 const data = [
   {
@@ -18,8 +16,7 @@ const data = [
     path: "https://livelook.app/",
     altText: "LiveLook",
     title: "Live Look",
-    text:
-      "Live Look keeps publishers and journalists in contact. Allows effective communication between PR teams.",
+    text: "PR Firm Database Tool.",
   },
   {
     id: 2,
@@ -27,7 +24,7 @@ const data = [
     path: "https://www.rootedsuccess.com/",
     altText: "Rooted Success",
     title: "Rooted Success",
-    text: "Created to support the future of equality and black success. ",
+    text: "Black-owned Business Directory.",
   },
 
   {
@@ -36,8 +33,7 @@ const data = [
     path: "https://www.evpulse.com/",
     altText: "EV Pulse",
     title: "EV Pulse",
-    text:
-      "EV fanatic blog covering the latest and greatest news in the electric vehicle space. ",
+    text: "Electric Vehicle News Website.",
   },
   {
     id: 4,
@@ -45,8 +41,7 @@ const data = [
     path: "https://www.greatlakesscuttlebutt.com/",
     altText: "Scuttlebutt",
     title: "Great Lakes Scuttlebutt",
-    text:
-      "Media application that strives to digitally unify the boating community.",
+    text: "Boating Social Media.",
   },
   {
     id: 5,
@@ -54,7 +49,7 @@ const data = [
     path: "https://www.abacuscpas.com/",
     altText: "Abacus CPAs",
     title: "Abacus CPAs",
-    text: "Tax filing application with in-depth status tracking.",
+    text: "Tax Status Tracking App.",
   },
   {
     id: 6,
@@ -62,8 +57,7 @@ const data = [
     path: "https://www.mercy.com/",
     altText: "Mercy Health",
     title: "Mercy Health",
-    text:
-      "Dashboard and mobile application built for helping hospital workers submit information back and forth.",
+    text: "Infection Prevention Tool for Hospital",
   },
 ];
 
