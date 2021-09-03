@@ -28,7 +28,14 @@ const styles = {
     mb: -1,
     margin: "auto",
     width: "50%",
+    "@media screen and (max-width: 1336px)": {
+      width: "80%",
+    },
+    "@media screen and (max-width: 1024px)": {
+      width: "100%",
+    },
   },
+
   img: {
     width: ["70px", null, null, "80px", "90px", "auto"],
     height: "auto",
