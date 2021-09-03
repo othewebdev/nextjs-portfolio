@@ -2,6 +2,9 @@
 import AbacusCPA from "assets/projects/abacus.png";
 import EVP from "assets/projects/EVP.png";
 import LiveLook from "assets/projects/livelook.png";
+import Lighthouse from "assets/projects/roofing.png";
+import CleanCarpets from "assets/projects/cleaning.png";
+import TruleyUnique from "assets/projects/store.png";
 import MercyHealth from "assets/projects/mercy.png";
 import Rooted from "assets/projects/rooted.png";
 import ScuttleButt from "assets/projects/scuttlebutt.png";
@@ -11,7 +14,23 @@ import { Container, Grid, jsx } from "theme-ui";
 
 const data = [
   {
+    id: 0,
+    imgSrc: Lighthouse,
+    path: "https://lighthousegutterandroof.com/",
+    altText: "Lighthouse Roofing and Repairs LLC",
+    title: "Lighthouse Roofing",
+    text: "WordPress Website for a local roofing company.",
+  },
+  {
     id: 1,
+    imgSrc: TruleyUnique,
+    path: "https://www.truleyunique.com/",
+    altText: "Truley Unique",
+    title: "Truley Unique",
+    text: "E-commerce site created for an Etsy seller.",
+  },
+  {
+    id: 2,
     imgSrc: LiveLook,
     path: "https://livelook.app/",
     altText: "LiveLook",
@@ -19,16 +38,15 @@ const data = [
     text: "PR Firm Database Tool.",
   },
   {
-    id: 2,
+    id: 3,
     imgSrc: Rooted,
     path: "https://www.rootedsuccess.com/",
     altText: "Rooted Success",
     title: "Rooted Success",
     text: "Black-owned Business Directory.",
   },
-
   {
-    id: 3,
+    id: 4,
     imgSrc: EVP,
     path: "https://www.evpulse.com/",
     altText: "EV Pulse",
@@ -36,15 +54,15 @@ const data = [
     text: "Electric Vehicle News Website.",
   },
   {
-    id: 4,
+    id: 5,
     imgSrc: ScuttleButt,
-    path: "https://www.greatlakesscuttlebutt.com/",
+    path: "https://scuttlebutt.app.link/download",
     altText: "Scuttlebutt",
     title: "Great Lakes Scuttlebutt",
     text: "Boating Social Media.",
   },
   {
-    id: 5,
+    id: 6,
     imgSrc: AbacusCPA,
     path: "https://www.abacuscpas.com/",
     altText: "Abacus CPAs",
@@ -52,12 +70,20 @@ const data = [
     text: "Tax Status Tracking App.",
   },
   {
-    id: 6,
+    id: 7,
     imgSrc: MercyHealth,
     path: "https://www.mercy.com/",
     altText: "Mercy Health",
     title: "Mercy Health",
     text: "Infection Prevention Tool for Hospital",
+  },
+  {
+    id: 8,
+    imgSrc: CleanCarpets,
+    path: "https://kccleancarpets.com/",
+    altText: "KC Clean Carpets",
+    title: "KC Clean Carpets",
+    text: "WordPress Website for a local carpet cleaning company.",
   },
 ];
 
@@ -97,6 +123,7 @@ const styles = {
       null,
       "80px 90px",
     ],
+
     gridTemplateColumns: ["repeat(1,1fr)", null, "repeat(2,1fr)"],
   },
 };

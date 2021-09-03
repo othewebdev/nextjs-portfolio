@@ -26,8 +26,9 @@ const styles = {
     display: "flex",
     alignItems: "flex-start",
     mb: -1,
+    margin: "auto",
+    width: "50%",
   },
-
   img: {
     width: ["70px", null, null, "80px", "90px", "auto"],
     height: "auto",
@@ -47,7 +48,6 @@ const styles = {
       fontWeight: 700,
       mb: ["10px", null, "15px"],
     },
-
     subTitle: {
       fontSize: [1, "15px"],
       fontWeight: 400,
