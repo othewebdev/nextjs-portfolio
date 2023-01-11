@@ -15,75 +15,24 @@ import { Container, Grid, jsx } from "theme-ui";
 const data = [
   {
     id: 0,
-    imgSrc: Lighthouse,
-    path: "https://lighthousegutterandroof.com/",
-    altText: "Lighthouse Roofing and Repairs LLC",
-    title: "Lighthouse Roofing",
-    text: "WordPress Website for a local roofing company.",
+    path: "https://www.babylonhealth.com/en-us",
+    altText: "Babylon Health",
+    title: "Babylon Health",
+    text: "Maintained internal component library for UK based mobile health application.",
   },
   {
     id: 1,
-    imgSrc: TruleyUnique,
-    path: "https://www.truleyunique.com/",
-    altText: "Truley Unique",
-    title: "Truley Unique",
-    text: "E-commerce site created for an Etsy seller.",
+    path: "https://amtrustofficesuites.com/",
+    altText: "Amtrust Office Suites",
+    title: "Amtrust Office Suites",
+    text: "Developed and hosted website for real estate agency using WordPress.",
   },
   {
     id: 2,
-    imgSrc: LiveLook,
-    path: "https://livelook.app/",
-    altText: "LiveLook",
-    title: "Live Look",
-    text: "PR Firm Database Tool.",
-  },
-  {
-    id: 3,
-    imgSrc: Rooted,
-    path: "https://www.rootedsuccess.com/",
-    altText: "Rooted Success",
-    title: "Rooted Success",
-    text: "Black-owned Business Directory.",
-  },
-  {
-    id: 4,
-    imgSrc: EVP,
-    path: "https://www.evpulse.com/",
-    altText: "EV Pulse",
-    title: "EV Pulse",
-    text: "Electric Vehicle News Website.",
-  },
-  {
-    id: 5,
-    imgSrc: ScuttleButt,
-    path: "https://scuttlebutt.app.link/download",
-    altText: "Scuttlebutt",
-    title: "Great Lakes Scuttlebutt",
-    text: "Boating Social Media.",
-  },
-  {
-    id: 6,
-    imgSrc: AbacusCPA,
-    path: "https://www.abacuscpas.com/",
-    altText: "Abacus CPAs",
-    title: "Abacus CPAs",
-    text: "Tax Status Tracking App.",
-  },
-  {
-    id: 7,
-    imgSrc: MercyHealth,
-    path: "https://www.mercy.com/",
-    altText: "Mercy Health",
-    title: "Mercy Health",
-    text: "Infection Prevention Tool for Hospital",
-  },
-  {
-    id: 8,
-    imgSrc: CleanCarpets,
-    path: "https://kccleancarpets.com/",
-    altText: "KC Clean Carpets",
-    title: "KC Clean Carpets",
-    text: "WordPress Website for a local carpet cleaning company.",
+    path: "https://www.texasmuseums360.org/",
+    altText: "Texas Museums 360",
+    title: "Texas Museums 360",
+    text: "Created navigation and Front-End components for an internal student/teacher dashboard.",
   },
 ];
 
@@ -97,7 +46,6 @@ export default function Projects() {
         {data.map((item) => (
           <FeatureCard
             key={item.id}
-            src={item.imgSrc}
             alt={item.altText}
             title={item.title}
             path={item.path}

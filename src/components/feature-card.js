@@ -1,20 +1,13 @@
 /** @jsx jsx */
 import { jsx, Image, Box, Heading, Text } from "theme-ui";
 
-export default function FeatureCard({
-  src,
-  altText = "default alt text",
-  title,
-  text,
-  path,
-}) {
+export default function FeatureCard({ title, text, path }) {
   return (
     <Box sx={styles.card}>
-      <a target="_blank" href={path}>
-        <Image src={src} altText={altText} sx={styles.img} />
-      </a>
       <Box sx={styles.wrapper}>
-        <Heading sx={styles.wrapper.title}>{title}</Heading>
+        <a target="_blank" href={path}>
+          <Heading sx={styles.wrapper.title}>{title}</Heading>
+        </a>
         <Text sx={styles.wrapper.subTitle}>{text}</Text>
       </Box>
     </Box>
